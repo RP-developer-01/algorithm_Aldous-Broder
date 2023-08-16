@@ -1,8 +1,223 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Общие стили для body */
 body {
     display: flex;
-    justify-content: center;
     height: 100vh;
-    margin: 0;
     align-items: center;
+    color: aqua;
+    background: black;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+hr {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Общие стили для контейнеров */
+.maze,
+.info-settings {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28%;
+    padding: 20px;
+}
+
+/* Стили для заголовка */
+h1 {
+    font-weight: 700;
+    font-size: 2rem; /* Адаптивный размер */
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.5rem; /* Адаптивный размер */
+}
+
+h1,
+h3 {
+    margin-bottom: 1rem;
+}
+
+/* Стили для параграфа */
+p {
+    text-align: center;
+    font-size: 1rem; /* Адаптивный размер */
+}
+
+/* Общие стили для кнопок */
+button {
+    padding: 15px 25px; /* Немного уменьшил padding для более компактного вида */
+    background-color: transparent;
+    margin: 10px; /* Небольшой отступ между кнопками */
+    color: aqua;
+    border: 1px solid #ccc;
+    font-size: 1rem; /* Адаптивный размер */
+}
+
+/* Скрытие некоторых кнопок */
+#Stop,
+#Resume,
+#Restart {
+    display: none;
+}
+
+/* Стили для canvas */
+canvas {
+    max-width: 100%;
+}
+
+/* Стили для контейнера выбора размера сетки */
+.fieldSize {
+    margin-top: 15px; /* Немного увеличил отступ сверху */
+    font-size: 1rem;
+}
+
+/* Стили для select */
+#gridSize {
+    padding: 5px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #191919;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Стили для option внутри select */
+#gridSize > option {
+    background-color: #191919;
+}
+
+/* Стили для при наведении на option внутри select */
+#gridSize > option:hover {
+    background-color: #191919;
+}
+
+/* Медиазапрос для устройств с максимальной шириной 768px */
+@media screen and (max-width: 768px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Общие стили для body */
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: aqua;
+        background: black;
+        padding: 1rem;
+    }
+
+    /* Общие стили для контейнеров */
+    .maze,
+    .info-settings {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Стили для заголовка */
+    h1,
+    h3 {
+        font-weight: 700;
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Стили для параграфа */
+    p {
+        font-size: 1rem;
+    }
+
+    /* Общие стили для кнопок */
+    button {
+        padding: 15px 25px;
+        background-color: transparent;
+        margin: 10px;
+        color: aqua;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    /* Скрытие некоторых кнопок */
+    #Stop,
+    #Resume,
+    #Restart {
+        display: none;
+    }
+
+    /* Стили для canvas */
+    canvas {
+        max-width: 100%;
+    }
+
+    /* Стили для контейнера выбора размера сетки */
+    .fieldSize {
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+
+    /* Стили для select */
+    #gridSize {
+        padding: 5px;
+        font-size: 1rem;
+        background-color: transparent;
+        color: white;
+        border: 1px solid #191919;
+        border-radius: 6px;
+        cursor: pointer;
+        outline: none;
+        width: 100%;
+    }
+
+    /* Стили для option внутри select */
+    #gridSize > option {
+        background-color: #191919;
+    }
+
+    /* Стили при наведении на option внутри select */
+    #gridSize > option:hover {
+        background-color: #191919;
+    }
+
+    .maze,
+    .info-settings {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
 }

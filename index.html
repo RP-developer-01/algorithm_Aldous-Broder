@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Генерация лабиринта с помощю Алгоритма Олдоса-Бродера</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Генерация лабиринта с помощю Алгоритма Олдоса-Бродера</title>
 </head>
+
 <body>
-        <h1>Алгоритм Олдоса-Бродера</h1>
-        <canvas></canvas>
-        <script src="script.js"></script>
+  <div class="maze">
+    <h1>Алгоритм Олдоса-Бродера</h1>
+    <p>
+      Алгоритм Олдоса-Бродера - метод генерации лабиринтов. Начиная с пустой
+      сетки, случайно превращаем стены в проходы, создавая сложную сеть
+      коридоров.
+    </p>
+    
+    <hr>
+
+    <h3>Сохранить png</h3>
+    <p>Если вы хотите сохранить лабиринт как изображение, то кликните на нем правой кнопкой мыши и выберите "Сохранить картинку как".</p>
+  </div>
+
+  <canvas></canvas>
+
+
+  <div class="info-settings">
+    <button id="Start">Начать генерацию</button>
+    <button id="Stop">Стоп</button>
+    <button id="Resume">Возобновить</button>
+    <button id="Restart">Сгенерировать заново</button>
+
+    <div class="fieldSize">
+      <label for="gridSize">Выберите размер сетки:</label>
+      <select id="gridSize">
+        <option value="31">30x30</option>
+        <option value="41">40x40</option>
+        <option value="51">50x50</option>
+        <option value="61">60x60</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
